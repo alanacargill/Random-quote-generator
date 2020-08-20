@@ -1,38 +1,156 @@
-.App {
-  text-align: center;
+.generator {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: fit-content;
+  cursor: pointer;
+  padding: 20px;
+  color: #4F4F4F;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.grow { 
+  transition: all .2s ease-in-out; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.grow:hover { 
+  transform: scale(1.1); 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  cursor: pointer;
+  color: #4F4F4F;
+  background: none;
+  border: none;
+  outline: inherit;
+  font-size: 18px;
+}
+
+.material-icons {
+  color: #4F4F4F;
+  font-size: 25px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 50vh;
+}
+
+.quote {
+  text-align: left;
+  font-size: 30px;
+  margin: 10px;
+  padding: 20px;
+  font-weight: 100;
+  border-left: 5px solid #ffdb58;
+  width: 50vw;
+  letter-spacing: 2px;
+  line-height: 120%;
+}
+
+.author-section {
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.author-section-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-start;
+}
+
+.author-section:hover {
+  background-color: black;
+  color: white;
+  transition: all .2s ease-in-out;
+}
+
+.author {
+  text-align: left;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 120%;
+  margin: 5px;
+}
+
+.see-more {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 120%;
+  margin: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #4F4F4F;
+}
+
+.arrow-icon {
+  color: black;
+  font-size: 50px;
+  justify-self: flex-end;
+}
+
+.author-section:hover .arrow-icon {
+  transition: all .2s ease-in-out; 
+  transform: scale(1.3); 
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.quote-by-author {
+  text-align: left;
+  font-size: 15px;
+  padding: 20px;
+  font-weight: 100;
+  width: 50vw;
+  letter-spacing: 2px;
+  border-left: 5px solid #ffdb58;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#quotes-by-author {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.quote-by-author {
+  text-align: left;
+  font-size: 15px;
+  padding: 20px;
+  margin: 30px 0;
+  font-weight: 100;
+  letter-spacing: 2px;
+  border-left: 5px solid #ffdb58;
+  width: 50vw;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.back {
+  padding: 20px;
 }
