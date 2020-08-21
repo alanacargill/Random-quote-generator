@@ -19,8 +19,8 @@ function RandomQuote() {
 
     return (
         <div>
-            <div className="generator grow">
-                <button onClick={loadQuote}>random</button>
+            <div onClick={loadQuote} className="generator grow">
+                <button>random</button>
                 <span className="material-icons">autorenew</span>
             </div>
             <div className="container">
